@@ -1,125 +1,62 @@
 {% extends "layout.html" %}
-
 {% block content %}
 
-
-
 <h1>Students</h1><a href="/student/add">click here to add new Student</a>	
-
 <table>
-
 	<tr>
-
 	  <th style="Width:50%">student_id</th>
-
 	  <th style="Width:10%">first_name</th>
-
   	  <th style="Width:40%">last_name</th>
-
 	</tr>
-
 {% for item in student %}
-
 	<tr>
-
 	<td>{{ item[0]}}</td>
-
 	<td>{{ item[1]}}</td>
-
 	<td>{{ item[2]}}</td>
-
 	</tr>
-
-
 
 {% endfor %}
 
-
-
 </table>
-
 <br>
-
 <h1>Quizes</h1><a href="/quiz/add">click here to add new Quiz</a>
-
 <table>
-
 	<tr>
-
 	  <th style="Width:10%">Quiz_id</th>
-
 	  <th style="Width:40%">Subject</th>
-
   	  <th style="Width:10%">Number_of_questions</th>
-
           <th style="Width:40%">Date</th>
-
 	</tr>
-
 {% for item in quiz %}
-
 	<tr>
-
 	<td>{{ item[0]}}</td>
-
 	<td>{{ item[1]}}</td>
-
 	<td>{{ item[2]}}</td>
-
         <td>{{ item[3]}}</td>
-
 	</tr>
-
-
 
 {% endfor %}
 
-
-
 </table>
-
 <br>
-
 <h1>Results</h1><a href="/results/add">click here to add Results</a>
-
 <table>
-
 	<tr>
-
 	  <th style="Width:10%">Record _ID</th>
-
 	  <th style="Width:40%">Student</th>
-
   	  <th style="Width:40%">Quiz</th>
-
           <th style="Width:10%">Grade</th>
-
 	</tr>
-
 {% for item in results %}
-
 	<tr>
-
 	<td>{{ item[0]}}</td>
-
 	<td>{{ item[1]}}</td>
-
 	<td>{{ item[2]}}</td>
-
         <td>{{ item[3]}}</td>
-
 	</tr>
-
-
 
 {% endfor %}
 
-
-
 </table>
-
-
 
 {% endblock content %}
-
-
