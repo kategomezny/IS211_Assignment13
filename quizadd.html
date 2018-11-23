@@ -1,21 +1,11 @@
 {% extends "layout.html" %}
-
 {% block content %}
 
-
-
 <form method="POST" action="http://localhost:5000/quiz/add">
-
     Subject:<input type="text" name="Subject"><br>
-
     Number of questions:<input type="number" name="Number_of_questions"><br>
-
     Date:<input type="text" name="Date"><br>
-
     <input type="submit" value="Submit">
-
 </form>
-
-
 
 {% endblock content %}
