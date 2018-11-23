@@ -1,39 +1,20 @@
-yout.html" %}
-
+{% extends "layout.html" %}
 {% block content %}
 
-
-
 <form method="POST" action="http://localhost:5000/results/add">
-
 	<select name="Student">
-
 	{% for value in student %}
-
 		<option value =" {{ value[0] }} ">{{ value[1] }} {{ value[2] }}</Option>
-
 	{% endfor %}	
-
 	</select><br>    
 
-
-
 	<select name="Quiz">
-
 	{% for value in quiz %}
-
 		<option value =" {{ value[0] }} ">{{ value[1] }} | {{ value[2] }}</Option>
-
 	{% endfor %}	
-
 	</select><br> 
-
 	Grade:<input name="Grade" type="text"><br>
-
 	<input class="btn btn-default" type="submit" value="Save">
-
   
-
 </form>
-
 {% endblock content%}
